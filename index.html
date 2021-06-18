@@ -1,104 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Healthy Craves</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-</head>
-<body>
-<!--NAV BAR STARTS HERE-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--NAV BAR STARTS HERE-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <img src="./assets/images/Healthy Craves.png" width="auto" height="50">
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img
+            src="./assets/images/Healthy Craves.png"
+            width="auto"
+            height="50"
+          />
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"> Home </a>
+
+          <a class="navbar-item"> Our Mission </a>
+
+          <a class="navbar-item"> Discover Recipies </a>
+
+          <a class="navbar-item"> Popular Blogs </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> More </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item"> Sumbit Your Own Recipie </a>
+              <a class="navbar-item"> Save Your Favorites </a>
+            </div>
+          </div>
         </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Home
-            </a>
 
-            <a class="navbar-item">
-                Our Mission
-            </a>
-
-            <a class="navbar-item">
-                Discover Recipies
-            </a>
-      
-            <a class="navbar-item">
-                Popular Blogs
-            </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                More
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <input type="text ml-1" />
+                <strong> <i class="fas fa-search ml-3"></i> Search</strong>
               </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  Sumbit Your Own Recipie
-                </a>
-                <a class="navbar-item">
-                  Save Your Favorites
-                </a>
-               
-              </div>
-            </div>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Search</strong>
-                </a>
-              </div>
             </div>
           </div>
         </div>
-      </nav>
-<!--NAV BAR ENDS-->
+      </div>
+    </nav>
+    <!--NAV BAR ENDS-->
 
-<!--HERO SECTION-->
-<section class="hero is-medium is-primary">
-    <div class="hero-body has-text-centered">
-      <p class="title">
-        Find A Recipie
-      </p>
-      <p class="subtitle">
-        
-      </p>
+    <!--HERO SECTION-->
+    <section class="hero is-medium is-primary">
+      <div class="hero-body has-text-centered">
+        <p class="title">Find A Recipie</p>
+        <p class="subtitle"></p>
+      </div>
+    </section>
+    <!--HERO SECTIONS ENDS-->
+
+    <!--SECTION ONE-->
+
+    <div class="columns">
+      <!--My Favorite Recipies-->
+      <div class="column is-two-fifths has-text-centered">
+        <h1>My Favorite Recipies</h1>
+        <footer class="modal-card-foot">
+          <button class="button is-primary">Add Recipie</button>
+          <button class="button">Cancel</button>
+        </footer>
+      </div>
+
+      <!--Most Popular-->
+      <div class="column has-text-centered">Most Popular</div>
     </div>
-  </section>
-<!--HERO SECTIONS ENDS-->  
-
-<!--SECTION ONE-->
-
-  <div class="columns">
-
-    <!--My Favorite Recipies-->
-    <div class="column is-two-fifths has-text-centered">
-      <h1>My Favorite Recipies</h1>
-    <footer class="modal-card-foot">
-      <button class="button is-primary">Add Recipie</button>
-      <button class="button">Cancel</button>
+    <!--footer-->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
     </footer>
-    </div>
-
-    <!--Most Popular-->
-    <div class="column has-text-centered">Most Popular</div>
-  </div>
-
-</body>
+  </body>
 </html>
