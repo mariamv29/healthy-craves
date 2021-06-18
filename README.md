@@ -16,11 +16,12 @@ Healthy craves will allow users to navigate it's website and search using server
 
 ### Outline (Wireframe)
 
-[healthy_craves.pdf](https://github.com/mariamv29/music-web-/files/6673922/healthy_craves.pdf)
+![Healthy-Craves-Wireframing](https://user-images.githubusercontent.com/83254086/122490116-7a62a680-cf9e-11eb-9312-ab8d9d7f4daf.JPG)
+
 
 ## **Link to Deployed Application**
 
 Check out the website by clicking here -> [Healthy Craves]()
 
-Check out the github by clicking here -> [H. Craves GitHub](https://github.com/mariamv29/music-web-/issues/new)
+Check out the github by clicking here -> [H. Craves GitHub](https://github.com/mariamv29/music-web-)
 
