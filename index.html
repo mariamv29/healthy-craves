@@ -61,7 +61,7 @@
 
           <a class="navbar-item" href="#mission"> Our Mission </a>
 
-          <a class="navbar-item" href="#discover"> Discover Recipies </a>
+          <a class="navbar-item" href="#discover"> Discover recipes </a>
 
           <a class="navbar-item" href="popblogs"> Popular Blogs </a>
 
@@ -69,8 +69,8 @@
             <a class="navbar-link"> More </a>
 
             <div class="navbar-dropdown">
-              <a class="navbar-item" href="#ownrecipe"> Sumbit Your Own Recipie </a>
-              <a class="navbar-item" href="favorites" id = "saveFaves"> Save Your Favorites </a>
+              <a class="navbar-item" id="submit-recipe" href="#ownrecipe"> Sumbit Your Own recipe </a>
+              <a class="navbar-item" href="favorites" id="saveFaves"> Save Your Favorites </a>
             </div>
           </div>
         </div>
@@ -90,9 +90,9 @@
     <!--NAV BAR ENDS-->
 
     <!--HERO SECTION-->
-    <section class="hero is-medium is-primary">
+    <section class="hero is-medium is-primary hero-background">
       <div class="hero-body has-text-centered">
-        <p class="title">Find A Recipie</p>
+        <p class="title">Find A recipe</p>
         <p class="subtitle"></p>
       </div>
     </section>
@@ -103,11 +103,11 @@
      <div class="columns"> 
 
 
-    <!--My Favorite Recipies-->
+    <!--My Favorite recipes-->
     <div class="column is-two-fifths has-text-centered is-size-3">
-      <h1>My Favorite Recipies</h1>
+      <h1>My Favorite recipes</h1>
     <footer class="modal-card-foot">
-      <button class="button is-primary">Add Recipie</button>
+      <button class="button is-primary">Add recipe</button>
       <button class="button">Cancel</button>
     </footer>
     </div>
@@ -215,14 +215,15 @@
     </div>
 
     <!--Popular blogs -->
-    <section class="section">
+    <section class="section hero-background">
       <div class="popular has-text-centered hero">
-        <h1 class="title is-2 has-background-warning ">THE BIG GUIDE</h1>
-        <h2 class="subtitle is-4">
-          Let's make your <strong>Healthy Recipie</strong> quest easy by
-          checking out these food blogs.
-        </h2>
-        <p>Get instant access to most fall upon popular food blogs!</p>
+        <h1 class="title is-2 has-background-warning">THE BIG GUIDE</h1>
+        <h2 class="subtitle is-4 has-text-white">
+      <strong class="has-background-warning"><br>Let's make your Healthy recipe
+quest easy by checking out these food blogs.<br> </strong> 
+       
+        <strong class="has-background-warning">Get instant access to most fall upon popular food blogs!</strong>
+         </h2>
         </div>
         <br />
         <div class="tile is-ancestor">
@@ -248,6 +249,19 @@
       </div>
     </section>
 
+    <div class="hero-background" id="recipe-saved">
+       <!-- Submit your recipe modal-->
+
+ <div class="modal" >
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <!-- Any other Bulma elements you want -->
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+      <button type="button" class="btn-save">Button</button>
+ </div>
+
     <!--Footer-->
     <footer class="footer">
       <div class="content has-text-centered">
@@ -263,6 +277,7 @@
         </p>
       </div>
     </footer>
+
 
     <script src="./assets/js/script.js"></script>
 

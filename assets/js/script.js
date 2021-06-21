@@ -31,9 +31,6 @@ var getUserRecipe = function() {
     
 }
 
-
-
-
 //capture magnifying button click
 var catchSearch = document.querySelector("#searchRecipes");
     catchSearch.addEventListener("click", getUserRecipe);
@@ -41,7 +38,16 @@ var catchSearch = document.querySelector("#searchRecipes");
 var saveThisRecipe = function(){
     window.prompt("Would you like to save a recipe?");
 }
-
+    
 // capture click from menu item
 var saveRec = document.querySelector("#saveFaves");
     saveRec.addEventListener("click", saveThisRecipe);
+
+//save button in modal was clicked 
+document.querySelector("#recipe-saved").addEventListener("click", function(event) {
+    if (event.target.matches(".btn-save")) {
+        console.log("btn works");
+      }
+    });
+
+
