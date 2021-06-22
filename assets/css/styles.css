@@ -5,3 +5,7 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.navbar-item img {
+    max-height: 6.5rem;
+}
