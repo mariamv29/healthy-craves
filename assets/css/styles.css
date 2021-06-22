@@ -9,3 +9,7 @@
 .navbar-item img {
     max-height: 6.5rem;
 }
+
+input {
+ border-radius: 20px;
+}
