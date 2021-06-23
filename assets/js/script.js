@@ -77,18 +77,18 @@ var displayRecipes = function (recipes) {
 
 //Drink Api
 
-window.onload = function () {
-  fetch("https://cors-anywhere.herokuapp.com/thecocktaildb.com/api/json/v1/1/random.php")
-    .then((response) => {
-      response.json();
+window.onload = function(){
+    fetch('https://cors-sucks.herokuapp.com/www.thecocktaildb.com/api/json/v1/1/random.php')
+    .then((res) => {
+        return res.json()
     })
-    .then((json) => {
-      console.log(json);
+    .then((data) => {
+        console.log(data.drinks[0])
     })
     .catch((err) => {
-      console.error(err);
-    });
-};
+        console.log(err)
+    })
+}
 
 //capture magnifying button click
 var catchSearch = document.querySelector("#searchRecipes");
