@@ -12,14 +12,7 @@
   </head>
 
   <body>
-    <!--NAV BAR STARTS HERE-->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <figure class="image is-48x48">
-              <img class="is-rounded" src="./assets/images/Healthy Craves.png" alt="brand icon">
-            </figure>
-          </a>
+
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -28,20 +21,6 @@
           </a>
         </div>
       
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Home
-            </a>
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img
-            src="./assets/images/Healthy Craves.png"
-            width="auto"
-            height="50"
-          />
-        </a>
-
         <a
           role="button"
           class="navbar-burger"
@@ -57,7 +36,12 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/"> Home </a>
+          <a class="navbar-item" href="/"> 
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span></a>
+
+      
 
           <a class="navbar-item" href="#mission"> Our Mission </a>
 
@@ -78,7 +62,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
+              <a class="button ">
                 <input id = "recipeText" type="text ml-1" />
                 <i id="searchRecipes" class="fas fa-search ml-3"></i>
               </a>
@@ -91,6 +75,7 @@
 
     <!--HERO SECTION-->
     <section class="hero is-medium is-primary hero-background">
+  
       <div class="hero-body has-text-centered">
         <p class="title">Find A recipe</p>
         <p class="subtitle"></p>
@@ -104,7 +89,7 @@
 
 
     <!--My Favorite recipes-->
-    <div class="column is-two-fifths has-text-centered is-size-3">
+    <div class="column is-two-fifths has-text-centered is-size-3 ">
       <h1>My Favorite recipes</h1>
     <footer class="modal-card-foot">
       <button class="button is-primary">Add recipe</button>
@@ -114,7 +99,7 @@
 
 
     <!--Most Popular-->
-    <div class="column has-text-centered is is-size-3">
+    <div class="column has-text-centered is is-size-3 ">
       <h1>Popular Cravings</h1>
 
     <!--Image Gallery-->  
@@ -201,21 +186,20 @@
 
 
     </div>
-   
-
   </div>
 
 </body>
      
 
     <!--Recipes-->
-    <div id="recipes-here" class="column has-text-centered">
+    <section class="has-background-primary"> 
+    <div id="recipes-here " class="column has-text-centered">
       <h2 class="subtitle">Recipe!<span id="recipes-search-term"></span></h2>
       <div id="recipes-container" class="list-group"></div>
     </div>
-
+</section>
     <!--Popular blogs -->
-    <section class="section hero-background">
+    <section class="section has-background-warning">
       <div class="popular has-text-centered hero">
         <h1 class="title is-2 has-background-warning">THE BIG GUIDE</h1>
         <h2 class="subtitle is-4 has-text-white">
@@ -252,11 +236,11 @@ quest easy by checking out these food blogs.<br> </strong>
     <div class="hero-background" id="recipe-saved">
 
   <!-- Submit your recipe modal-->
- <div class="modal" >
+  <div class="modal" >
   <div class="modal-background"></div>
-  <div class="modal-content">
+  <div class="modal-content"> -->
     <!-- Any other Bulma elements you want -->
-  </div>
+   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
       <button type="button" class="btn-save">Button</button>

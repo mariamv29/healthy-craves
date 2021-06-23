@@ -21,40 +21,73 @@ var getUserRecipe = function () {
     "&app_id=a3b3b2be&app_key=cf006eda64061e44a7e53cd676889a23";
 
   //make a request to the url
-  fetch(apiURL)
-  .then(function (response) { 
-      console.log(response);
-    return response.json().then(function (data) {
-       console.log(data.searchReach)
-    //   displayRecipes(data, searchTerm);
+  fetch(apiURL).then(function (response) {
+    console.log(response);
+    response.json().then(function (data) {
+      console.log(data);
+      //   displayRecipes(data, searchTerm);
       //create variable to hold recipeHits value
       var recipeHits;
 
       //target hits from object
       recipeHits = data.hits;
-      console.log(recipeHits);
-
-      ///new code ///
-
-      // Create a variable that will select the <div> where the recipe will be displayed
-      var recipesHereEl = document.querySelector("#recipes-here");
-      //empty the <div> before we append recipe  to it
-      recipesHereEl.innerHTML = " ";
-
-      var calories = document.createElement("div");
-      calories.setAttribute(response.data.calories);
-
-      // Append "calories" to the <div>
-      recipesHereEl.appendChild.apply(calories);
-      /// end of new code //
+      displayRecipes(recipeHits);
+      console.log(recipeHits[0].recipe.label);
     });
   });
 };
 
-// new code// displaying date to  page
-var displayRecipes = function (recipe, searchTerm) {
-  console.log(recipe);
-  console.log(searchTerm);
+// new code
+// displaying content to  page
+var displayRecipes = function (recipes) {
+  // Create a variable that will select the <div> where the recipes will be displayed
+  var recipesContainerEl = document.querySelector("#recipes-container");
+
+  //clear old content
+  recipesContainerEl.innerHTML = "";
+
+  console.log(recipes);
+  ///new code ///
+  for (var i = 0; i < 4; i++) {
+    var recipeslabel = document.createElement("h1");
+    recipeslabel.innerHTML = recipes[i].recipe.label;
+
+    console.log(recipesContainerEl);
+
+    var calories = document.createElement("p");
+    var recipesUrl = document.createElement("a");
+    calories.innerHTML = " calories " + Math.round(recipes[i].recipe.calories);
+    recipesUrl.setAttribute("href", recipes[i].recipe.url);
+    recipesUrl.innerHTML = "Checkout the link!";
+    recipesUrl.setAttribute("target", "_blank");
+
+    // create variable to hold image
+    var image = document.createElement("img");
+    image.setAttribute("src", recipes[i].recipe.image);
+    //append
+    recipesContainerEl.appendChild(recipeslabel);
+    // Append "calories" to the <div>
+    recipesContainerEl.appendChild(calories);
+    recipesContainerEl.appendChild(image);
+    recipesContainerEl.appendChild(recipesUrl);
+  }
+
+  /// end of new code //
+};
+
+//Drink Api
+
+window.onload = function () {
+  fetch("https://cors-anywhere.herokuapp.com/thecocktaildb.com/api/json/v1/1/random.php")
+    .then((response) => {
+      response.json();
+    })
+    .then((json) => {
+      console.log(json);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 };
 
 //capture magnifying button click
