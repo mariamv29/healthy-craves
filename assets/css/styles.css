@@ -1,11 +1,17 @@
 .hero-background {
-    background-image: url("https://www.duluthnewstribune.com/incoming/article1691453.ece/alternates/BASE_LANDSCAPE/3378675%2BThinkstockPhotos-589415708.jpg");
+    background-image: url("/screenshots/shutterstock_1491621017.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
-    background-size: cover;
-    background-attachment: fixed;
+
 }
 
+<<<<<<< HEAD
 .navbar-item img {
     max-height: 6.5rem;
 }
+=======
+input {
+    border-radius: 20px;
+}
+
+>>>>>>> display-apt-content
