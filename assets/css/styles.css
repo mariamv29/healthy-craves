@@ -8,7 +8,7 @@
 /* hero section*/
 
 .hero-background {
-    background-image: url("/screenshots/shutterstock_1491621017.jpg");
+    background-image: url("../images/screenshots/shutterstock_1491621017.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
