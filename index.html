@@ -1,30 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Healthy Craves</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="icon" type="image/png" href="https://reeoo.jingoffer.com/Flat%20Tomato-icon.png!icon512">
   </head>
+
   <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title .is-$info">Welcome to Healthy Craves!</h1>
-        <p class="subtitle button is-link">search</p>
+    <!--NAV BAR STARTS HERE-->
+      
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <!--Home Icon-->
+          <a class="navbar-item" href="/"> <span class="icon"><i class="fas fa-home"></i></span></a>
+          
+          <!--Links with working button clicks-->
+          <a class="navbar-item" href="./our-mission.html">Our Mission</a>
+
+          <a class="navbar-item" href="#discoverDrinks">Discover Drinks</a>
+
+          <a class="navbar-item" href="#popBlogs">Popular Blogs</a>
+
+            <!--Drop Down Menu-->
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">More</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" id="submit-recipe" href="#ownrecipe"> Sumbit Your Own recipe </a>
+                <a class="navbar-item" href="favorites" id="saveFaves"> Save Your Favorites </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button ">
+                <input id = "recipeText" type="text ml-1" />
+                <i id="searchRecipes" class="fas fa-search ml-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="columns">
-        <div class="column">1</div>
-        <div class="column">2</div>
-        <div class="column">3</div>
-        <div class="column">4</div>
-        <div class="column">5</div>
+    </nav>
+    <!--NAV BAR ENDS-->
+
+    <!--HERO SECTION-->
+    <section class="hero is-medium has-text-white">
+      <div class="hero-body has-text-centered">
+        <p class="title-id">Healthy Craves</p>
       </div>
     </section>
+    <!--HERO SECTIONS ENDS-->
+
+    <!--SECTION ONE-->
+    <div class="columns is-mobile has-background-primary">
+  <!--Recipes-->
+  <div class="column is-two-fifths">
+    <section class="has-background-primary has-text-centered is-size-3 is-mobile" id="recipe-parent"> 
+      <div id="recipes-here " class="has-text-centered is-mobile">
+        <h2 class="subtitle is-2">Recipes:<span id="recipes-search-term"></span></h2>
+    <div id="recipes-container"></div>
+      </div>
+    </section>
+  </div>
+  
+
+
+    <!--Most Popular-->
+    <div class="column has-text-centered is-size-3" id = "popBlogs">
+      <h2 class="subtitle is-2">Popular Cravings</h2>
+
+    <!--Image Gallery-->  
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Pizza</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/pizza.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Burgers</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/burgers.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Tacos</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/tacos.jpg">
+          </figure>
+        </article>
+      </div>
+    </div>
+
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Wings</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/wings.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Pasta</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/pasta.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Breakfast Foods</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/brekky.jpg">
+          </figure>
+        </article>
+      </div>
+    </div>
+
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Vegetarian</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/Vegetarian.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Fries & Sides</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/sides.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="subtitle">Desserts</p>
+          <figure class="image is-4by3">
+            <img src="./assets/images/dessert.jpg">
+          </figure>
+        </article>
+      </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!--Popular blogs -->
+    <section class="section has-background-warning">
+      <div class="popular has-text-centered hero">
+        <h1 class="title-id is-2 has-text-white">THE BIG GUIDE</h1>
+        <h2 class="subtitle is-4 has-text-white title-blur">
+      <strong class="title-id-2 has-text-white"><br>Let's make your healthy lifestyle quest easier by checking out these food blogs!<br> </strong> 
+       
+        <strong class="title-id-2 has-text-white">Get instant access to most fall upon popular food blogs!</strong>
+         </h2>
+        </div>
+        <br />
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box; blog-box" id="blog-container">
+              <p class="title" >21 Wellness Blogs To Check Out!</p>
+              <figure class="media is-inline-block">
+                <!-- <p class="image is-96x96"> -->
+                  <img class="is-large" src="./assets/images/wellness blog.jpg">
+                </p>
+              </figure>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+            <div class="tile is-child box; blog-box" id="blog-container">
+              <p class="title">20 Popular Health Blogs!</p>
+              <figure class="media is-inline-block">
+                <!-- <p class="image is-96x96"> -->
+                  <img class="is-large" src="./assets/images/healthyblogs.jpg">
+                </p>
+              </figure>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+          </div>
+          <div class="tile is-child box" id = "discoverDrinks">
+            <p class="title has-text-centered">Get Your Buzz On with Homemade Cocktails!</p>
+            <div class="tile is-child box; blog-box has-text-centered" id="blog-container-drinks">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero-background" id="recipe-saved">
+
+  <!-- Submit your recipe modal-->
+  <!-- <div class="modal" >
+  <div class="modal-background"></div>
+  <div class="modal-content">  -->
+    <!-- Any other Bulma elements you want -->
+   <!-- </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+      <button type="button" class="btn-save">Button</button>
+ </div>  -->
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by
+          <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
+          licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+          website content is licensed
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY NC SA 4.0</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+
+    <script src="./assets/js/script.js"></script>
+
   </body>
 </html>
-
-
-
