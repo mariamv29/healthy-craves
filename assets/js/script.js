@@ -42,7 +42,7 @@ var displayRecipes = function (recipes) {
   recipesContainerEl.innerHTML = "";
 
   console.log(recipes);
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     var recipeslabel = document.createElement("h1");
     recipeslabel.innerHTML = recipes[i].recipe.label;
 

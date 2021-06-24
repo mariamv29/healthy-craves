@@ -7,15 +7,17 @@
 
 /* hero section*/
 
-.hero-background {
-    background-image: url("../images/screenshots/shutterstock_1491621017.jpg");
-    background-position: center; 
+.hero {
+   
+background-image: url("../images/shutterstock_1491621017.jpg");
+ background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
     align-items: center;
 }
+
 
 
 .navbar-item img {
@@ -50,3 +52,21 @@ width: fit-content;
 .footCenter{
 text-align: center;
 }
+
+.title-id-2 {
+    backdrop-filter:blur(50px);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: fit-content;
+    
+    }
+    .title-blur {
+        backdrop-filter:blur(50px);
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 10px;
+        width: fit-content;
+        margin-top: 10px;
+        
+        }
