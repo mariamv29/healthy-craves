@@ -45,5 +45,8 @@ font-size: 50px;
 font-weight: bold;
 border-radius: 10px;
 width: fit-content;
+}
 
+.footCenter{
+text-align: center;
 }
