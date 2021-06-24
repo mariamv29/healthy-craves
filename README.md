@@ -25,3 +25,7 @@ Check out the website by clicking here -> [Healthy Craves]()
 
 Check out the github by clicking here -> [H. Craves GitHub](https://github.com/mariamv29/music-web-)
 
+ ## **PHOTOS Works Cited - page link
+ https://www.shutterstock.com/
+
+

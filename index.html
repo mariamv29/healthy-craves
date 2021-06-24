@@ -14,12 +14,13 @@
   <body>
     <!--NAV BAR STARTS HERE-->
       
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
+      
         <a
           role="button"
           class="navbar-burger"
@@ -41,9 +42,9 @@
 
           <a class="navbar-item" href="#mission"> Our Mission </a>
 
-          <a class="navbar-item" href="#discover"> Discover recipes </a>
+          <a class="navbar-item" href="#discover"> Popular Cravings </a>
 
-          <a class="navbar-item" href="popblogs"> Popular Blogs </a>
+          <a class="navbar-item" href="popblogs"> The Big Guide </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> More </a>
@@ -58,7 +59,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
+              <a class="button ">
                 <input id = "recipeText" type="text ml-1" />
                 <i id="searchRecipes" class="fas fa-search ml-3"></i>
               </a>
@@ -70,32 +71,30 @@
     <!--NAV BAR ENDS-->
 
     <!--HERO SECTION-->
-    <section class="hero is-medium is-primary hero-background">
+    <section class="hero is-medium has-text-white">
       <div class="hero-body has-text-centered">
-        <p class="title">Find A recipe</p>
-        <p class="subtitle"></p>
+        <p class="title-id">Healthy Craves</p>
       </div>
     </section>
     <!--HERO SECTIONS ENDS-->
 
     <!--SECTION ONE-->
-
-     <div class="columns"> 
-
-
-    <!--My Favorite recipes-->
-    <div class="column is-two-fifths has-text-centered is-size-3">
-      <h1>My Favorite recipes</h1>
-    <footer class="modal-card-foot">
-      <button class="button is-primary">Add recipe</button>
-      <button class="button">Cancel</button>
-    </footer>
-    </div>
+    <div class="columns is-mobile has-background-primary">
+  <!--Recipes-->
+  <div class="column is-two-fifths">
+    <section class="has-background-primary has-text-centered is-size-3 is-mobile" id="recipe-parent"> 
+      <div id="recipes-here " class="has-text-centered is-mobile">
+        <h2 class="subtitle is-2">Recipes:<span id="recipes-search-term"></span></h2>
+    <div id="recipes-container"></div>
+      </div>
+    </section>
+  </div>
+  
 
 
     <!--Most Popular-->
-    <div class="column has-text-centered is is-size-3">
-      <h1>Popular Cravings</h1>
+    <div class="column has-text-centered is-size-3 ">
+      <h2 class="subtitle is-2">Popular Cravings</h2>
 
     <!--Image Gallery-->  
     <div class="tile is-ancestor">
@@ -179,67 +178,63 @@
       </div>
     </div>
 
-
     </div>
-   
-
-  </div>
-
-</body>
-    
-  <!--Recipes-->
-  <section class="section is-medium has-background-primary">
-    <h1 class="title has-text-centered">Recipe!</h1>
-    <div id="recipes-here"></div>
-  </section>
+    </div>
 
     <!--Popular blogs -->
     <section class="section has-background-warning">
       <div class="popular has-text-centered hero">
-        <h1 class="title is-2 has-background-warning">THE BIG GUIDE</h1>
-        <h2 class="subtitle is-4 has-text-white">
-      <strong class="has-background-warning"><br>Let's make your Healthy recipe
-quest easy by checking out these food blogs.<br> </strong> 
+        <h1 class="title-id is-2 has-text-white">THE BIG GUIDE</h1>
+        <h2 class="subtitle is-4 has-text-white title-blur">
+      <strong class="title-id-2 has-text-white"><br>Let's make your healthy lifestyle quest easier by checking out these food blogs!<br> </strong> 
        
-        <strong class="has-background-warning">Get instant access to most fall upon popular food blogs!</strong>
+        <strong class="title-id-2 has-text-white">Get instant access to most fall upon popular food blogs!</strong>
          </h2>
         </div>
         <br />
         <div class="tile is-ancestor">
           <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
-              <p class="title">One</p>
+            <div class="tile is-child box; blog-box" id="blog-container">
+              <p class="title" >21 Wellness Blogs To Check Out!</p>
+              <figure class="media is-inline-block">
+                <!-- <p class="image is-96x96"> -->
+                  <img class="is-large" src="./assets/images/wellness blog.jpg">
+                </p>
+              </figure>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
             </div>
-            <div class="tile is-child box">
-              <p class="title">Two</p>
+            <div class="tile is-child box; blog-box" id="blog-container">
+              <p class="title">20 Popular Health Blogs!</p>
+              <figure class="media is-inline-block">
+                <!-- <p class="image is-96x96"> -->
+                  <img class="is-large" src="./assets/images/healthyblogs.jpg">
+                </p>
+              </figure>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
             </div>
           </div>
-          <div class="tile is-parent">
-            <div class="tile is-child box">
-              <p class="title">Three</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-              <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-              <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+          <div class="tile is-child box">
+            <p class="title has-text-centered">Get Your Buzz On with Homemade Cocktails!</p>
+            <div class="tile is-child box; blog-box has-text-centered" id="blog-container-drinks">
+            
             </div>
           </div>
         </div>
       </div>
     </section>
 
-   <!--<div class="hero-background" id="recipe-saved">
-       <! Submit your recipe modal-->
+    <div class="hero-background" id="recipe-saved">
 
- <!-- <div class="modal" >
+  <!-- Submit your recipe modal-->
+  <!-- <div class="modal" >
   <div class="modal-background"></div>
-  <div class="modal-content">
-  <!Any other Bulma elements you want -->
-  <!-- </div>
+  <div class="modal-content">  -->
+    <!-- Any other Bulma elements you want -->
+   <!-- </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
       <button type="button" class="btn-save">Button</button>
- </div> --> 
+ </div>  -->
 
     <!--Footer-->
     <footer class="footer">
