@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="icon" type="image/png" href="https://www.pngkey.com/detail/u2q8q8y3w7u2e6r5_vegetables-png/">
+    <link rel="icon" type="image/png" href="https://reeoo.jingoffer.com/Flat%20Tomato-icon.png!icon512">
   </head>
 
   <body>
+    <!--NAV BAR STARTS HERE-->
+      
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -40,15 +42,18 @@
             </div>
         </div>
 
-        <!--Search Bar-->
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button "><input id = "recipeText" type="text ml-1"/><i id="searchRecipes" class="fas fa-search ml-3"></i></a>
+              <a class="button ">
+                <input id = "recipeText" type="text ml-1" />
+                <i id="searchRecipes" class="fas fa-search ml-3"></i>
+              </a>
             </div>
           </div>
         </div>
-    </div>
+      </div>
+    </nav>
     <!--NAV BAR ENDS-->
 
     <!--HERO SECTION-->
@@ -74,7 +79,7 @@
 
 
     <!--Most Popular-->
-    <div class="column has-text-centered is-size-3 ">
+    <div class="column has-text-centered is-size-3" id = "popBlogs">
       <h2 class="subtitle is-2">Popular Cravings</h2>
 
     <!--Image Gallery-->  
@@ -158,13 +163,12 @@
         </article>
       </div>
     </div>
-    </div>
-  </body>
-     
 
-  
+    </div>
+    </div>
+
     <!--Popular blogs -->
-    <section class="section has-background-warning" id = "discoverDrinks">
+    <section class="section has-background-warning">
       <div class="popular has-text-centered hero">
         <h1 class="title-id is-2 has-text-white">THE BIG GUIDE</h1>
         <h2 class="subtitle is-4 has-text-white title-blur">
@@ -195,7 +199,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
             </div>
           </div>
-          <div class="tile is-child box">
+          <div class="tile is-child box" id = "discoverDrinks">
             <p class="title has-text-centered">Get Your Buzz On with Homemade Cocktails!</p>
             <div class="tile is-child box; blog-box has-text-centered" id="blog-container-drinks">
             
