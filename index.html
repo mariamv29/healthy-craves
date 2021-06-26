@@ -12,49 +12,34 @@
   </head>
 
   <body>
+    <!--NAV BAR STARTS HERE-->
       
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/"> 
-            <span class="icon">
-              <i class="fas fa-home"></i>
-            </span></a>
+          <!--Home Icon-->
+          <a class="navbar-item" href="/"> <span class="icon"><i class="fas fa-home"></i></span></a>
+          
+          <!--Links with working button clicks-->
+          <a class="navbar-item" href="./our-mission.html">Our Mission</a>
 
-      
+          <a class="navbar-item" href="#discoverDrinks">Discover Drinks</a>
 
-          <a class="navbar-item" href="#mission"> Our Mission </a>
+          <a class="navbar-item" href="#popBlogs">Popular Blogs</a>
 
-          <a class="navbar-item" href="#discover"> Discover recipes </a>
-
-          <a class="navbar-item" href="popblogs"> Popular Blogs </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link"> More </a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item" id="submit-recipe" href="#ownrecipe"> Sumbit Your Own recipe </a>
-              <a class="navbar-item" href="favorites" id="saveFaves"> Save Your Favorites </a>
+            <!--Drop Down Menu-->
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">More</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" id="submit-recipe" href="#ownrecipe"> Sumbit Your Own recipe </a>
+                <a class="navbar-item" href="favorites" id="saveFaves"> Save Your Favorites </a>
+              </div>
             </div>
-          </div>
         </div>
 
         <div class="navbar-end">
@@ -72,32 +57,30 @@
     <!--NAV BAR ENDS-->
 
     <!--HERO SECTION-->
-    <section class="hero is-medium is-primary hero-background">
+    <section class="hero is-medium has-text-white">
       <div class="hero-body has-text-centered">
         <p class="title-id">Healthy Craves</p>
-        <p class="subtitle"></p>
       </div>
     </section>
     <!--HERO SECTIONS ENDS-->
 
     <!--SECTION ONE-->
-
-
-
+    <div class="columns is-mobile has-background-primary">
   <!--Recipes-->
-  <section class="has-background-primary has-text-centered is-size-3 is-mobile" id="recipe-parent"> 
-    <div id="recipes-here " class="has-text-centered is-mobile">
-      <h2 class="subtitle is-1">Recipe!<span id="recipes-search-term"></span></h2>
-  <div id="recipes-container" class="media is-left"></div>
-             
-        
-    </div>
+  <div class="column is-two-fifths">
+    <section class="has-background-primary has-text-centered is-size-3 is-mobile" id="recipe-parent"> 
+      <div id="recipes-here " class="has-text-centered is-mobile">
+        <h2 class="subtitle is-2">Recipes:<span id="recipes-search-term"></span></h2>
+    <div id="recipes-container"></div>
+      </div>
     </section>
+  </div>
+  
 
 
     <!--Most Popular-->
-    <div class="column has-text-centered is-size-3 ">
-      <h1>Popular Cravings</h1>
+    <div class="column has-text-centered is-size-3" id = "popBlogs">
+      <h2 class="subtitle is-2">Popular Cravings</h2>
 
     <!--Image Gallery-->  
     <div class="tile is-ancestor">
@@ -181,40 +164,44 @@
       </div>
     </div>
 
-
+    </div>
     </div>
 
-
-</body>
-     
-
-  
     <!--Popular blogs -->
     <section class="section has-background-warning">
       <div class="popular has-text-centered hero">
-        <h1 class="title is-2 has-background-warning">THE BIG GUIDE</h1>
-        <h2 class="subtitle is-4 has-text-white">
-      <strong class="has-background-warning"><br>Let's make your Healthy recipe
-quest easy by checking out these food blogs.<br> </strong> 
+        <h1 class="title-id is-2 has-text-white">THE BIG GUIDE</h1>
+        <h2 class="subtitle is-4 has-text-white title-blur">
+      <strong class="title-id-2 has-text-white"><br>Let's make your healthy lifestyle quest easier by checking out these food blogs!<br> </strong> 
        
-        <strong class="has-background-warning">Get instant access to most fall upon popular food blogs!</strong>
+        <strong class="title-id-2 has-text-white">Get instant access to most fall upon popular food blogs!</strong>
          </h2>
         </div>
         <br />
         <div class="tile is-ancestor">
           <div class="tile is-4 is-vertical is-parent">
             <div class="tile is-child box; blog-box" id="blog-container">
-              <p class="title" >One</p>
+              <p class="title" >21 Wellness Blogs To Check Out!</p>
+              <figure class="media is-inline-block">
+                <!-- <p class="image is-96x96"> -->
+                  <img class="is-large" src="./assets/images/wellness blog.jpg">
+                </p>
+              </figure>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
             </div>
             <div class="tile is-child box; blog-box" id="blog-container">
-              <p class="title">Two</p>
+              <p class="title">20 Popular Health Blogs!</p>
+              <figure class="media is-inline-block">
+                <!-- <p class="image is-96x96"> -->
+                  <img class="is-large" src="./assets/images/healthyblogs.jpg">
+                </p>
+              </figure>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
             </div>
           </div>
-          <div class="tile is-child box">
-            <p class="title">Get your buzz on!</p>
-            <div class="tile is-child box; blog-box" id="blog-container-drinks">
+          <div class="tile is-child box" id = "discoverDrinks">
+            <p class="title has-text-centered">Get Your Buzz On with Homemade Cocktails!</p>
+            <div class="tile is-child box; blog-box has-text-centered" id="blog-container-drinks">
             
             </div>
           </div>

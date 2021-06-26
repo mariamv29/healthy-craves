@@ -42,7 +42,7 @@ var displayRecipes = function (recipes) {
   recipesContainerEl.innerHTML = "";
 
   console.log(recipes);
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     var recipeslabel = document.createElement("h1");
     recipeslabel.innerHTML = recipes[i].recipe.label;
 
@@ -52,7 +52,7 @@ var displayRecipes = function (recipes) {
     var recipesUrl = document.createElement("a");
     calories.innerHTML = " calories \n" + Math.round(recipes[i].recipe.calories);
     recipesUrl.setAttribute("href", recipes[i].recipe.url);
-    recipesUrl.innerHTML = "Checkout the link!";
+    recipesUrl.innerHTML = "Checkout the link!\n";
     recipesUrl.setAttribute("target", "_blank");
 
     // create variable to hold image
