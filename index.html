@@ -20,7 +20,7 @@
       <span aria-hidden="true"></span>
     </a>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBasicExample" class="is-mobile navbar-menu">
         <div class="navbar-start">
           <!--Home Icon-->
           <a class="navbar-item" href="/"> <span class="icon"><i class="fas fa-home"></i></span></a>
@@ -37,7 +37,7 @@
               <a class="navbar-link">More</a>
               <div class="navbar-dropdown">
                 <a class="navbar-item" id="submit-recipe" href="#ownrecipe"> Sumbit Your Own recipe </a>
-                <a class="navbar-item" href="favorites" id="saveFaves"> Save Your Favorites </a>
+         
               </div>
             </div>
         </div>
@@ -67,22 +67,23 @@
 
 
 
-  <!-- Submit your recipe modal-->
-
+  <!-- Submit your recipe card-->
 
 
   <div class="card">
-    <div class="card-content">
-      <h4>Your Favorite Recipes!</h4>
-      <ul id="list-meal" class="list-group list-group-flush">
-      </ul>
+    <h4 class="card-header">Your Favorite Recipes!</h4>
+      <ul id="list-meal" class="list-group list-group-flush"></ul>
     </div>
   </div>
 
 
+     <button id="create-recipe" class="btn btn-favorite"
+        type=“button”>
+    Add to favorites
+</button>
 
 
-
+<!-- modal -->
   <div class="modal" id="recipe-form-modal" tabindex="-1" 
   role="dialog"aria-labelledby="recipe-form-modal" aria-hidden="true">
     <div class="modal-background" role="document">
@@ -97,14 +98,13 @@
       >
         <span aria-hidden="true">&times;</span>
       </button>
-      <!-- Any other Bulma elements you want -->
     
-        <button class="modal-close is-large" aria-label="close"></button>
+         <button class="modal-close is-large" aria-label="close"></button>
       </div>
       
     </div>  
     </div>  
-  </div>
+  </div>  
 
 
     <!--SECTION ONE-->

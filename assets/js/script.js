@@ -120,21 +120,22 @@ var saveRec = document.querySelector("#saveFaves");
 saveRec.addEventListener("click", saveThisRecipe);
 
 //save button in modal was clicked
-document
-  .querySelector("#recipe-saved")
+document.querySelector("#recipe-saved")
   .addEventListener("click", function (event) {
     if (event.target.matches(".btn-save")) {
       console.log("btn works");
     }
   });
 
-var inputRecipe = function(recipeId) {
-//create element that make up the recipe
-var recipeLi = document.createElement("li");
-  recipeLi.className = "list-group-item";
 
-//append h4 element to parent li
-recipeLi.append()
+/// saving recipe in my favorite recipe
+var inputRecipe = function(recipeId) {
+//create element that make up the recipe property
+var recipeProperty = document.createElement("p");
+recipeProperty.className = "recipe-group-item";
+
+//append P element to parent li
+recipeProperty.append()
 
 }
 
@@ -143,6 +144,8 @@ var recipeId = recipe.label
 if(recipeId) {
   inputRecipe (recipeId, "Your Favorite Recipes!" )
 }
+
+// 
 
 
 //save favorite recipes 
