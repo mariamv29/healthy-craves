@@ -6,6 +6,9 @@ function genRecipe() {
   console.log(recipeHits);
 }
 
+// create array to hold recipes for saving
+var recipes = []; 
+
 //use user input to target recipes from server API
 var getUserRecipe = function () {
   //target user input text value
@@ -96,7 +99,7 @@ var displayDrinks = function (drinks) {
   drinkImg.setAttribute("src", drinks.strDrinkThumb);
 
   var instructions = document.createElement("p");
-  instructions.innerHTML =drinks.strInstructions;
+  instructions.innerHTML = drinks.strInstructions;
 
   blogContainerEl.appendChild(drinkType);
   blogContainerEl.appendChild(instructions);
@@ -124,4 +127,42 @@ document
       console.log("btn works");
     }
   });
-console.log("btn works");
+
+var inputRecipe = function(recipeId) {
+//create element that make up the recipe
+var recipeLi = document.createElement("li");
+  recipeLi.className = "list-group-item";
+
+//append h4 element to parent li
+recipeLi.append()
+
+}
+
+var recipeId = recipe.label
+
+if(recipeId) {
+  inputRecipe (recipeId, "Your Favorite Recipes!" )
+}
+
+
+//save favorite recipes 
+var saveRecipes = function () {
+  localStorage.setItem("recipes", JSON.stringify (recipes))
+}
+
+
+var loadRecipes = function () {
+  var savedRecipes = localStorage.getItem("recipes");
+  if (!savedRecipes) {
+    return false;
+  }
+
+  savedRecipes = JSON.parse(savedRecipes);
+
+  // loop through savedRecipesarray
+  for (var i = 0; i < savedRecipes.length; i++)
+    // pass each task object into the `createTaskEl()` function
+    createRecipeEl(savedRecipes[i]);
+};
+
+loadRecipes();
