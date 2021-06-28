@@ -23,6 +23,7 @@ var getUserRecipe = function () {
     console.log(response);
     response.json().then(function (data) {
       console.log(data);
+
       //create variable to hold recipeHits value
       var recipeHits;
 
@@ -33,6 +34,7 @@ var getUserRecipe = function () {
     });
   });
 };
+
 // displaying content to  page
 var displayRecipes = function (recipes) {
   // Create a variable that will select the <div> where the recipes will be displayed
@@ -50,7 +52,8 @@ var displayRecipes = function (recipes) {
 
     var calories = document.createElement("p");
     var recipesUrl = document.createElement("a");
-    calories.innerHTML = " calories \n" + Math.round(recipes[i].recipe.calories);
+    calories.innerHTML =
+      " calories \n" + Math.round(recipes[i].recipe.calories);
     recipesUrl.setAttribute("href", recipes[i].recipe.url);
     recipesUrl.innerHTML = "Checkout the link!\n";
     recipesUrl.setAttribute("target", "_blank");
@@ -61,14 +64,20 @@ var displayRecipes = function (recipes) {
     //append
     recipesContainerEl.appendChild(recipeslabel);
     recipesContainerEl.appendChild(calories);
-     recipesContainerEl.appendChild(recipesUrl);
+    recipesContainerEl.appendChild(recipesUrl);
     recipesContainerEl.appendChild(image);
-   
+
+
+
+
+    // recipes[recipeslabel] = recipe;
+    // console.log(recipeslabel);
+
+    savedRecipes();
   }
 };
 
-//Drink Api
-
+//Drink API
 window.onload = function () {
   fetch(
     "https://cors-sucks.herokuapp.com/www.thecocktaildb.com/api/json/v1/1/random.php"
@@ -96,12 +105,11 @@ var displayDrinks = function (drinks) {
   drinkImg.setAttribute("src", drinks.strDrinkThumb);
 
   var instructions = document.createElement("p");
-  instructions.innerHTML =drinks.strInstructions;
+  instructions.innerHTML = drinks.strInstructions;
 
   blogContainerEl.appendChild(drinkType);
   blogContainerEl.appendChild(instructions);
   blogContainerEl.appendChild(drinkImg);
-
 };
 
 //capture magnifying button click
@@ -109,14 +117,14 @@ var catchSearch = document.querySelector("#searchRecipes");
 catchSearch.addEventListener("click", getUserRecipe);
 
 var saveThisRecipe = function () {
-  window.prompt("Would you like to save a recipe?");
+  modal.style.display = "block";
 };
 
-// capture click from menu item
+// // capture click from menu item
 var saveRec = document.querySelector("#saveFaves");
 saveRec.addEventListener("click", saveThisRecipe);
 
-//save button in modal was clicked
+// //save button in modal was clicked
 document
   .querySelector("#recipe-saved")
   .addEventListener("click", function (event) {
@@ -124,4 +132,25 @@ document
       console.log("btn works");
     }
   });
-console.log("btn works");
+
+/// saving recipe in my favorite recipe
+var inputRecipe = function (recipeId) {
+  //create element that make up the recipe property
+  var recipeProperty = document.createElement("p");
+  recipeProperty.className = "recipe-group-item";
+
+  //append P element to parent li
+  recipeProperty.append();
+};
+
+    // create array to hold recipes for saving
+    var recipe = [];
+
+//save input to local storage
+var savedRecipes = function () {
+  localStorage.setItem("recipe", JSON.stringify(recipe));
+};
+
+var loadRecipes = function () {
+  recipe = JSON.parse(localStorage.getItem("recipe"));
+}

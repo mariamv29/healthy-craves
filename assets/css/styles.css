@@ -1,9 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* hero section*/
 
@@ -21,24 +20,22 @@ background-image: url("../images/shutterstock_1491621017.jpg");
 
 
 .navbar-item img {
-    max-height: 6.5rem;
+  max-height: 6.5rem;
 }
 input {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .blog-box:hover {
-    cursor: pointer;
-    transform: scale(1.0);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.396);
-  }
+  cursor: pointer;
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.396);
+}
 
 #recipes-container {
-    font-size: 15px;
-    align-items: center;
-    justify-content: space-evenly;
-  
-    
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .title-id {
