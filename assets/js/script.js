@@ -37,7 +37,6 @@ var getUserRecipe = function () {
 
 // displaying content to  page
 var displayRecipes = function (recipes) {
-  var tempArr =[];
   // Create a variable that will select the <div> where the recipes will be displayed
   var recipesContainerEl = document.querySelector("#recipes-container");
 
@@ -69,15 +68,16 @@ var displayRecipes = function (recipes) {
     recipesContainerEl.appendChild(image);
 
 
-    // // update array on tasks object and save
-    // recipes[calories.recipe] = tempArr;
+
+
+    // recipes[recipeslabel] = recipe;
+    // console.log(recipeslabel);
 
     savedRecipes();
   }
 };
 
 //Drink API
-
 window.onload = function () {
   fetch(
     "https://cors-sucks.herokuapp.com/www.thecocktaildb.com/api/json/v1/1/random.php"
@@ -143,28 +143,14 @@ var inputRecipe = function (recipeId) {
   recipeProperty.append();
 };
 
-  // create array to hold recipes for saving
-var recipes = [];
+    // create array to hold recipes for saving
+    var recipe = [];
 
 //save input to local storage
 var savedRecipes = function () {
-  localStorage.setItem("recipes", JSON.stringify(recipes));
-
-
+  localStorage.setItem("recipe", JSON.stringify(recipe));
 };
 
 var loadRecipes = function () {
   recipe = JSON.parse(localStorage.getItem("recipe"));
-  console.log(recipe); 
-
-
-  if (!savedRecipes) {
-    return false;
-  }
-  // loop through savedRecipesarray
-  for (var i = 0; i < savedRecipes.length; i++)
-    // pass each task object into the `createTaskEl()` function
-    createRecipeEl(savedRecipes[i]);
-};
-
-loadRecipes();
+}
