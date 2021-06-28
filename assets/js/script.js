@@ -2,12 +2,11 @@
 var recipeHere = document.querySelector("#recipes-here");
 var searchTerm = document.querySelector("#recipes-search-term");
 
+
 function genRecipe() {
   console.log(recipeHits);
 }
 
-// create array to hold recipes for saving
-var recipes = []; 
 
 //use user input to target recipes from server API
 var getUserRecipe = function () {
@@ -26,6 +25,7 @@ var getUserRecipe = function () {
     console.log(response);
     response.json().then(function (data) {
       console.log(data);
+  
       //create variable to hold recipeHits value
       var recipeHits;
 
@@ -67,6 +67,8 @@ var displayRecipes = function (recipes) {
      recipesContainerEl.appendChild(recipesUrl);
     recipesContainerEl.appendChild(image);
    
+
+    saveRecipes();
   }
 };
 
@@ -104,28 +106,29 @@ var displayDrinks = function (drinks) {
   blogContainerEl.appendChild(drinkType);
   blogContainerEl.appendChild(instructions);
   blogContainerEl.appendChild(drinkImg);
+//
 
 };
 
 //capture magnifying button click
-var catchSearch = document.querySelector("#searchRecipes");
+ var catchSearch = document.querySelector("#searchRecipes");
 catchSearch.addEventListener("click", getUserRecipe);
 
-var saveThisRecipe = function () {
+ var saveThisRecipe = function () {
   window.prompt("Would you like to save a recipe?");
-};
+ };
 
-// capture click from menu item
-var saveRec = document.querySelector("#saveFaves");
-saveRec.addEventListener("click", saveThisRecipe);
+// // capture click from menu item
+ var saveRec = document.querySelector("#saveFaves");
+ saveRec.addEventListener("click", saveThisRecipe);
 
-//save button in modal was clicked
-document.querySelector("#recipe-saved")
+// //save button in modal was clicked
+ document.querySelector("#recipe-saved")
   .addEventListener("click", function (event) {
     if (event.target.matches(".btn-save")) {
       console.log("btn works");
     }
-  });
+   });
 
 
 /// saving recipe in my favorite recipe
@@ -139,33 +142,31 @@ recipeProperty.append()
 
 }
 
-var recipeId = recipe.label
-
-if(recipeId) {
-  inputRecipe (recipeId, "Your Favorite Recipes!" )
-}
-
-// 
 
 
 //save favorite recipes 
 var saveRecipes = function () {
-  localStorage.setItem("recipes", JSON.stringify (recipes))
+  localStorage.setItem("recipes", JSON.stringify(recipes))
+ var savedRecipes = localStorage.getItem("recipes");
+   savedRecipes = JSON.parse(savedRecipes);
+// create array to hold recipes for saving
+var recipes = [recipeHits[0].recipe.label]; 
+
 }
 
 
-var loadRecipes = function () {
-  var savedRecipes = localStorage.getItem("recipes");
-  if (!savedRecipes) {
-    return false;
-  }
+// var loadRecipes = function () {
+//  
+//   if (!savedRecipes) {
+//     return false;
+//   }
 
-  savedRecipes = JSON.parse(savedRecipes);
 
-  // loop through savedRecipesarray
-  for (var i = 0; i < savedRecipes.length; i++)
-    // pass each task object into the `createTaskEl()` function
-    createRecipeEl(savedRecipes[i]);
-};
 
-loadRecipes();
+//   // loop through savedRecipesarray
+//   for (var i = 0; i < savedRecipes.length; i++)
+//     // pass each task object into the `createTaskEl()` function
+//     createRecipeEl(savedRecipes[i]);
+// };
+
+// loadRecipes();
