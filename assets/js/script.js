@@ -2,11 +2,9 @@
 var recipeHere = document.querySelector("#recipes-here");
 var searchTerm = document.querySelector("#recipes-search-term");
 
-
 function genRecipe() {
   console.log(recipeHits);
 }
-
 
 //use user input to target recipes from server API
 var getUserRecipe = function () {
@@ -25,7 +23,7 @@ var getUserRecipe = function () {
     console.log(response);
     response.json().then(function (data) {
       console.log(data);
-  
+
       //create variable to hold recipeHits value
       var recipeHits;
 
@@ -36,8 +34,10 @@ var getUserRecipe = function () {
     });
   });
 };
+
 // displaying content to  page
 var displayRecipes = function (recipes) {
+  var tempArr =[];
   // Create a variable that will select the <div> where the recipes will be displayed
   var recipesContainerEl = document.querySelector("#recipes-container");
 
@@ -53,7 +53,8 @@ var displayRecipes = function (recipes) {
 
     var calories = document.createElement("p");
     var recipesUrl = document.createElement("a");
-    calories.innerHTML = " calories \n" + Math.round(recipes[i].recipe.calories);
+    calories.innerHTML =
+      " calories \n" + Math.round(recipes[i].recipe.calories);
     recipesUrl.setAttribute("href", recipes[i].recipe.url);
     recipesUrl.innerHTML = "Checkout the link!\n";
     recipesUrl.setAttribute("target", "_blank");
@@ -64,15 +65,18 @@ var displayRecipes = function (recipes) {
     //append
     recipesContainerEl.appendChild(recipeslabel);
     recipesContainerEl.appendChild(calories);
-     recipesContainerEl.appendChild(recipesUrl);
+    recipesContainerEl.appendChild(recipesUrl);
     recipesContainerEl.appendChild(image);
-   
 
-    saveRecipes();
+
+    // // update array on tasks object and save
+    // recipes[calories.recipe] = tempArr;
+
+    savedRecipes();
   }
 };
 
-//Drink Api
+//Drink API
 
 window.onload = function () {
   fetch(
@@ -106,67 +110,61 @@ var displayDrinks = function (drinks) {
   blogContainerEl.appendChild(drinkType);
   blogContainerEl.appendChild(instructions);
   blogContainerEl.appendChild(drinkImg);
-//
-
 };
 
 //capture magnifying button click
- var catchSearch = document.querySelector("#searchRecipes");
+var catchSearch = document.querySelector("#searchRecipes");
 catchSearch.addEventListener("click", getUserRecipe);
 
- var saveThisRecipe = function () {
-  window.prompt("Would you like to save a recipe?");
- };
+var saveThisRecipe = function () {
+  modal.style.display = "block";
+};
 
 // // capture click from menu item
- var saveRec = document.querySelector("#saveFaves");
- saveRec.addEventListener("click", saveThisRecipe);
+var saveRec = document.querySelector("#saveFaves");
+saveRec.addEventListener("click", saveThisRecipe);
 
 // //save button in modal was clicked
- document.querySelector("#recipe-saved")
+document
+  .querySelector("#recipe-saved")
   .addEventListener("click", function (event) {
     if (event.target.matches(".btn-save")) {
       console.log("btn works");
     }
-   });
-
+  });
 
 /// saving recipe in my favorite recipe
-var inputRecipe = function(recipeId) {
-//create element that make up the recipe property
-var recipeProperty = document.createElement("p");
-recipeProperty.className = "recipe-group-item";
+var inputRecipe = function (recipeId) {
+  //create element that make up the recipe property
+  var recipeProperty = document.createElement("p");
+  recipeProperty.className = "recipe-group-item";
 
-//append P element to parent li
-recipeProperty.append()
+  //append P element to parent li
+  recipeProperty.append();
+};
 
-}
+  // create array to hold recipes for saving
+var recipes = [];
 
-
-
-//save favorite recipes 
-var saveRecipes = function () {
-  localStorage.setItem("recipes", JSON.stringify(recipes))
- var savedRecipes = localStorage.getItem("recipes");
-   savedRecipes = JSON.parse(savedRecipes);
-// create array to hold recipes for saving
-var recipes = [recipeHits[0].recipe.label]; 
-
-}
+//save input to local storage
+var savedRecipes = function () {
+  localStorage.setItem("recipes", JSON.stringify(recipes));
 
 
-// var loadRecipes = function () {
-//  
-//   if (!savedRecipes) {
-//     return false;
-//   }
+};
+
+var loadRecipes = function () {
+  recipe = JSON.parse(localStorage.getItem("recipe"));
+  console.log(recipe); 
 
 
+  if (!savedRecipes) {
+    return false;
+  }
+  // loop through savedRecipesarray
+  for (var i = 0; i < savedRecipes.length; i++)
+    // pass each task object into the `createTaskEl()` function
+    createRecipeEl(savedRecipes[i]);
+};
 
-//   // loop through savedRecipesarray
-//   for (var i = 0; i < savedRecipes.length; i++)
-//     // pass each task object into the `createTaskEl()` function
-//     createRecipeEl(savedRecipes[i]);
-// };
-
-// loadRecipes();
+loadRecipes();
