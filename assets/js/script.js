@@ -52,8 +52,7 @@ var displayRecipes = function (recipes) {
 
     var calories = document.createElement("p");
     var recipesUrl = document.createElement("a");
-    calories.innerHTML =
-      " calories \n" + Math.round(recipes[i].recipe.calories);
+    calories.innerHTML =" calories \n" + Math.round(recipes[i].recipe.calories);
     recipesUrl.setAttribute("href", recipes[i].recipe.url);
     recipesUrl.innerHTML = "Checkout the link!\n";
     recipesUrl.setAttribute("target", "_blank");
